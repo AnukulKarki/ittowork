@@ -3,9 +3,12 @@ import HomeIllustration from "../images/LandingPageImage.png";
 import Project from "../images/project.png";
 import Clients from "../images/client.png";
 
-const Home = () => {
+const Home = ({ id }) => {
   return (
-    <section className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center h-[85vh]">
+    <section
+      id={id}
+      className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center md:h-[85vh]"
+    >
       <div className="md:w-1/2">
         <p className="text-gray-500 italic">Your Partner In Progress...</p>
         <h1 className="text-4xl font-bold text-black mt-2">
