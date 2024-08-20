@@ -51,7 +51,7 @@ const Home = () => {
         <img
           src={HomeIllustration}
           alt="Illustration"
-          className="w-100 h-100"
+          className="hidden md:block w-100 h-100"
         />
       </div>
     </section>
