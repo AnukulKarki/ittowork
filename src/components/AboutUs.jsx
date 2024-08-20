@@ -1,9 +1,9 @@
 import React from "react";
 import AboutUsIllustration from "../images/AboutUsImage.png";
 
-const AboutUs = () => {
+const AboutUs = ({ id }) => {
   return (
-    <section className="bg-white px-12 md:px-20 mb-10">
+    <section id={id} className="bg-white px-12 md:px-20 mb-10">
       <div className=" md:h-1/2 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="md:w-1/2 flex justify-center items-center">
           <img

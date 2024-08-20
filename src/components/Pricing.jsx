@@ -1,12 +1,15 @@
 import React from "react";
 
-const Pricing = () => {
+const Pricing = ({ id }) => {
   return (
-    <section className="flex flex-col items-center px-12 md:px-20 mb-20">
+    <section
+      id={id}
+      className="flex flex-col items-center px-12 md:px-20 mb-20"
+    >
       <h1 className="text-3xl font-bold mb-8">Our Pricing</h1>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full">
-        <div className="w-full max-w-sm p-6 bg-white border rounded-lg hover:shadow-md">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full ">
+        <div className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto">
           <div className="mb-4">
             <h2 className="text-xl font-bold my-5">Monthly</h2>
             <p className="text-gray-600">
@@ -37,7 +40,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-sm p-6 bg-white border rounded-lg hover:shadow-md">
+        <div className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto">
           <div className="mb-4">
             <h2 className="text-xl font-bold my-5">Monthly</h2>
             <p className="text-gray-600">
@@ -68,7 +71,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-sm p-6 bg-white border rounded-lg hover:shadow-md">
+        <div className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto">
           <div className="mb-4">
             <h2 className="text-xl font-bold my-5">Monthly</h2>
             <p className="text-gray-600">

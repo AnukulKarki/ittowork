@@ -3,9 +3,9 @@ import Cloud from "../images/Cloud.png";
 import Web from "../images/web.png";
 import Seo from "../images/SEO.png";
 
-const Service = () => {
+const Service = ({ id }) => {
   return (
-    <section className="bg-white px-12 md:px-20 mb-20">
+    <section id={id} className="bg-white px-12 md:px-20 mb-20">
       <div className="md:h-1/2 mt-10 text-center">
         <h2 className="text-3xl font-bold text-black">Our Services</h2>
         <p className="text-gray-600 mt-4">
@@ -15,7 +15,7 @@ const Service = () => {
         <div className="flex flex-col md:flex-row justify-center items-center mt-12 space-y-8 md:space-y-0 md:space-x-8">
           <div className="text-center">
             <div className="rounded-full inline-block">
-              <img src={Cloud} alt="" srcset="" />
+              <img src={Cloud} alt="" />
             </div>
             <h3 className="text-xl font-bold text-black mt-4">Cloud Hosting</h3>
             <p className="text-gray-600 mt-2">
@@ -31,7 +31,7 @@ const Service = () => {
 
           <div className="text-center">
             <div className="rounded-full inline-block">
-              <img src={Web} alt="" srcset="" />
+              <img src={Web} alt="" />
             </div>
             <h3 className="text-xl font-bold text-black mt-4">
               Web Development
@@ -49,7 +49,7 @@ const Service = () => {
 
           <div className="text-center">
             <div className="rounded-full inline-block">
-              <img src={Seo} alt="" srcset="" />
+              <img src={Seo} alt="" />
             </div>
             <h3 className="text-xl font-bold text-black mt-4">
               Seo & Content Creation
