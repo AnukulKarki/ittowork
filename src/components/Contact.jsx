@@ -41,7 +41,7 @@ const Contact = ({ id }) => {
           </button>
         </div>
 
-        <div className="space-y-3 bg-white p-8 rounded-lg shadow-lg">
+        <div className="space-y-3 bg-white  p-0 md: p-8 rounded-lg shadow-lg">
           <div className="grid grid-cols-2 gap-4">
             <input
               className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
