@@ -52,6 +52,12 @@ const Contact = ({ id }) => {
         theme: "light",
         });
     }
+    setName("");
+    setLastname("");
+    setEmail("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
 
   }
  
