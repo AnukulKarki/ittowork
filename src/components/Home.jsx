@@ -4,12 +4,9 @@ import Project from "../images/project.png";
 import Clients from "../images/client.png";
 import { projectAndClient } from "../utils/DataUtils";
 
-const Home = ({ id }) => {
+const Home = () => {
   return (
-    <section
-      id={id}
-      className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center md:h-[85vh]"
-    >
+    <section className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center md:h-[85vh] pb-[10vh] pt-[5vh]">
       <div className="md:w-1/2">
         <p className="text-gray-500 italic">Your Partner In Progress...</p>
         <h1 className="text-4xl font-bold text-black mt-2">
@@ -27,7 +24,9 @@ const Home = ({ id }) => {
               <img src={Project} alt="" />
             </div>
             <div className="ml-4">
-              <p className="text-black font-bold text-lg">{projectAndClient.project}+</p>
+              <p className="text-black font-bold text-lg">
+                {projectAndClient.project}+
+              </p>
               <p className="text-gray-600">Projects</p>
             </div>
           </div>
@@ -36,7 +35,9 @@ const Home = ({ id }) => {
               <img src={Clients} alt="" />
             </div>
             <div className="ml-4">
-              <p className="text-black font-bold text-lg">{projectAndClient.client}+</p>
+              <p className="text-black font-bold text-lg">
+                {projectAndClient.client}+
+              </p>
               <p className="text-gray-600">Clients</p>
             </div>
           </div>

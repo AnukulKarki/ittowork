@@ -6,12 +6,14 @@ import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Clients from "./components/Clients";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Home id="home" />
+      <Navbar id="home" />
+      <Home />
+      <BackToTop />
       <AboutUs id="about" />
       <Service id="services" />
       <Pricing id="pricing" />

@@ -5,7 +5,7 @@ import Mail from "../images/mail.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#EAF3FF] p-12 md:px-20">
+    <footer className="bg-[#EAF3FF] px-12 md:px-20 py-[5vh]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         <div className="md:text-left text-center space-y-6">
           <h2 className="text-2xl font-bold text-blue-900">ITTOWORK</h2>
@@ -21,22 +21,27 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-blue-900">Quick Links</h3>
           <ul className="space-y-4">
             <li>
-              <a href="/" className="text-gray-700 hover:text-blue-800">
+              <a href="#home" className="text-gray-700 hover:text-blue-800">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="text-gray-700 hover:text-blue-800">
                 About Us
               </a>
             </li>
             <li>
-              <a href="/" className="text-gray-700 hover:text-blue-800">
+              <a href="#pricing" className="text-gray-700 hover:text-blue-800">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="/" className="text-gray-700 hover:text-blue-800">
+              <a href="#services" className="text-gray-700 hover:text-blue-800">
                 Services
               </a>
             </li>
             <li>
-              <a href="/" className="text-gray-700 hover:text-blue-800">
+              <a href="#contact" className="text-gray-700 hover:text-blue-800">
                 Projects
               </a>
             </li>

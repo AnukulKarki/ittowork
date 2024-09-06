@@ -4,13 +4,9 @@ import Web from "../images/web.png";
 import Seo from "../images/SEO.png";
 
 const Service = ({ id }) => {
-
-  
-
-
   return (
-    <section id={id} className="bg-white px-12 md:px-20 mb-20">
-      <div className="md:h-1/2 mt-10 text-center">
+    <section id={id} className="bg-white px-12 md:px-20 pb-[10vh] pt-[5vh]">
+      <div className="md:h-1/2 text-center">
         <h2 className="text-3xl font-bold text-black">Our Services</h2>
         <p className="text-gray-600 mt-4">
           At ITTO Work, we build robust IT frameworks that drive your growth,
@@ -27,7 +23,7 @@ const Service = ({ id }) => {
             </p>
             <a
               href="/"
-              className="text-blue-600 font-semibold mt-4 inline-block"
+              className="text-blue-800 font-semibold mt-4 inline-block"
             >
               Learn More →
             </a>
@@ -45,7 +41,7 @@ const Service = ({ id }) => {
             </p>
             <a
               href="/"
-              className="text-blue-600 font-semibold mt-4 inline-block"
+              className="text-blue-800 font-semibold mt-4 inline-block"
             >
               Learn More →
             </a>
@@ -63,7 +59,7 @@ const Service = ({ id }) => {
             </p>
             <a
               href="/"
-              className="text-blue-600 font-semibold mt-4 inline-block"
+              className="text-blue-800 font-semibold mt-4 inline-block"
             >
               Learn More →
             </a>
