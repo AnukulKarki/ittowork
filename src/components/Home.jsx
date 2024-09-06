@@ -2,6 +2,7 @@ import React from "react";
 import HomeIllustration from "../images/LandingPageImage.png";
 import Project from "../images/project.png";
 import Clients from "../images/client.png";
+import { projectAndClient } from "../utils/DataUtils";
 
 const Home = ({ id }) => {
   return (
@@ -26,7 +27,7 @@ const Home = ({ id }) => {
               <img src={Project} alt="" />
             </div>
             <div className="ml-4">
-              <p className="text-black font-bold text-lg">25+</p>
+              <p className="text-black font-bold text-lg">{projectAndClient.project}+</p>
               <p className="text-gray-600">Projects</p>
             </div>
           </div>
@@ -35,7 +36,7 @@ const Home = ({ id }) => {
               <img src={Clients} alt="" />
             </div>
             <div className="ml-4">
-              <p className="text-black font-bold text-lg">25+</p>
+              <p className="text-black font-bold text-lg">{projectAndClient.client}+</p>
               <p className="text-gray-600">Clients</p>
             </div>
           </div>
@@ -54,7 +55,7 @@ const Home = ({ id }) => {
         <img
           src={HomeIllustration}
           alt="Illustration"
-          className="w-100 h-100"
+          className="hidden md:block w-100 h-100"
         />
       </div>
     </section>

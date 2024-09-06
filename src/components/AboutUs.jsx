@@ -9,7 +9,7 @@ const AboutUs = ({ id }) => {
           <img
             src={AboutUsIllustration}
             alt="About Us Illustration"
-            className="w-85 h-85"
+            className=" w-85 h-85"
           />
         </div>
 

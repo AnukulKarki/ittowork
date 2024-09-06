@@ -1,9 +1,66 @@
-import React from "react";
+import React, {useState} from "react";
 import Location from "../images/location.png";
 import Call from "../images/call.png";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import apis from "../apis/Apis";
 
 const Contact = ({ id }) => {
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit =  async () => {
+    var formData = new FormData();
+    formData.append("firstName", name);
+    formData.append("lastName", lastname);
+    formData.append("email", email);
+    formData.append("phoneNo", phone);
+    formData.append("subject", subject);
+    formData.append("message", message);
+
+    let response = await fetch(apis.contact, {
+      method: "POST",
+      body: formData,
+    });
+
+    if(response.status === 201){
+      toast.success('Form Submitted', {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+    else{
+      toast.error('Fill all the fields', {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+
+  }
+ 
+
+
+
+
   return (
+    <>
     <section id={id} className="bg-[#EAF3FF] p-12 md:px-20">
       <div className="flex flex-col text-center items-center">
         <h2 className="text-3xl font-bold text-black">
@@ -41,17 +98,21 @@ const Contact = ({ id }) => {
           </button>
         </div>
 
-        <div className="space-y-3 bg-white p-8 rounded-lg shadow-lg">
+        <div className="space-y-3 bg-white  p-0 md: p-8 rounded-lg shadow-lg">
           <div className="grid grid-cols-2 gap-4">
             <input
               className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
               type="text"
-              placeholder="Full Name"
+              placeholder="First and Middle Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
               type="text"
               placeholder="Last Name"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
             />
           </div>
 
@@ -60,11 +121,15 @@ const Contact = ({ id }) => {
               className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
               type="text"
               placeholder="Phone No."
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <input
               className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -72,20 +137,30 @@ const Contact = ({ id }) => {
             className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
             type="text"
             placeholder="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
           />
 
           <textarea
             className="border border-gray-300 p-3 w-full rounded-md focus:ring focus:ring-blue-200"
             placeholder="Enter your message..."
             rows="5"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            
           ></textarea>
 
-          <button className="w-full bg-blue-900 text-white py-3 rounded-md hover:bg-blue-800">
+          <button onClick={handleSubmit} className="w-full bg-blue-900 text-white py-3 rounded-md hover:bg-blue-800" >
             Send Message
           </button>
+          
+          
         </div>
       </div>
+      
     </section>
+    <ToastContainer/>
+    </>
   );
 };
 
