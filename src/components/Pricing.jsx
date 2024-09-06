@@ -2,64 +2,63 @@ import React, { useEffect, useState } from "react";
 import apis from "../apis/Apis";
 
 const Pricing = ({ id }) => {
-
   const [services, setServices] = useState([]);
 
-  const handleService =  async () => {
+  const handleService = async () => {
     let response = await fetch(apis.pricing, {
       method: "GET",
     });
 
     let parsedData = await response.json();
-    
-    if(response.status === 200){
+
+    if (response.status === 200) {
       setServices(parsedData);
     }
-
-  }
+  };
 
   useEffect(() => {
     handleService();
-  }, []); 
+  }, []);
 
   return (
     <section
       id={id}
-      className="flex flex-col items-center px-12 md:px-20 mb-20"
+      className="flex flex-col items-center px-12 md:px-20 pb-[10vh] pt-[5vh]"
     >
       <h1 className="text-3xl font-bold mb-8">Our Pricing</h1>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full ">
-        {services && services.map((item, index) => (
-          <div className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto" key={index}>
-          <div className="mb-4">
-            <h2 className="text-xl font-bold my-5">{item.headline}</h2>
-            <p className="text-gray-600">
-              {item.description}
-            </p>
-          </div>
-          <div className="space-y-4">
-            <div className="text-lg my-2">
-              Price: <span className="text-3xl font-bold">${item.pricing}</span>/month
+        {services &&
+          services.map((item, index) => (
+            <div
+              className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto"
+              key={index}
+            >
+              <div className="mb-4">
+                <h2 className="text-xl font-bold my-5">{item.headline}</h2>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+              <div className="space-y-4">
+                <div className="text-lg my-2">
+                  Price:{" "}
+                  <span className="text-3xl font-bold">${item.pricing}</span>
+                  /month
+                </div>
+                <button className="w-full py-2 bg-blue-800 text-white rounded-md">
+                  Buy Now
+                </button>
+                <ul className="list-disc pl-5 space-y-3">
+                  {item.featurelistmonth &&
+                    item.featurelistmonth.map((item, index) => (
+                      <li key={index}>{item.feature}</li>
+                    ))}
+                </ul>
+                <a href="/" className="text-blue-800 flex items-center">
+                  Learn More <ArrowRightIcon className="ml-1" />
+                </a>
+              </div>
             </div>
-            <button className="w-full py-2 bg-blue-800 text-white rounded-md">
-              Buy Now
-            </button>
-            <ul className="list-disc pl-5 space-y-3">
-              {item.featurelistmonth && item.featurelistmonth.map((item,index)=>(
-
-                  <li key={index}>{item.feature}</li>
-              ))}
-              
-            </ul>
-            <a href="/" className="text-blue-800 flex items-center">
-              Learn More <ArrowRightIcon className="ml-1" />
-            </a>
-          </div>
-        </div>
-
-        ))}
-        
+          ))}
 
         {/* <div className="w-full sm:max-w-sm p-6 bg-white border rounded-lg hover:shadow-md mx-auto">
           <div className="mb-4">
@@ -92,7 +91,6 @@ const Pricing = ({ id }) => {
           </div>
         </div>
           */}
-         
       </div>
     </section>
   );

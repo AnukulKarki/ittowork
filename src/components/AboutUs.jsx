@@ -3,7 +3,7 @@ import AboutUsIllustration from "../images/AboutUsImage.png";
 
 const AboutUs = ({ id }) => {
   return (
-    <section id={id} className="bg-white px-12 md:px-20 mb-10">
+    <section id={id} className="bg-white px-12 md:px-20 pb-[10vh] pt-[5vh]">
       <div className=" md:h-1/2 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="md:w-1/2 flex justify-center items-center">
           <img
@@ -13,7 +13,7 @@ const AboutUs = ({ id }) => {
           />
         </div>
 
-        <div className="md:w-1/2 mt-8 md:mt-0 md:pl-12">
+        <div className="md:w-1/2 md:mt-0 md:pl-12">
           <h2 className="text-3xl font-bold text-black">About Us</h2>
           <p className="text-black-600 mt-4">
             ITTOWORK Providing service since 2024

@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import Logo from "../images/Logo.png";
 import MenuIcon from "../images/Hamburger.png"; // Custom Menu icon
 
-const Navbar = () => {
+const Navbar = ({ id }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav className="bg-[#EAF3FF] flex justify-between items-center px-6 md:px-10 py-4 md:py-6 relative h-[20vh] md:h-auto">
+    <nav
+      id={id}
+      className="bg-[#EAF3FF] flex justify-between items-center px-6 md:px-10 py-4 md:py-6 relative h-auto"
+    >
       {/* Logo Section */}
       <div className="flex items-center">
-        <a href="#home">
+        <a href="#home" onClick={closeMenu}>
           <img src={Logo} alt="logo" className="w-auto h-10 md:h-12" />
         </a>
       </div>
@@ -32,24 +37,28 @@ const Navbar = () => {
         <a
           href="#about"
           className="block text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg transition-colors duration-300"
+          onClick={closeMenu}
         >
           About
         </a>
         <a
           href="#services"
           className="block text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg transition-colors duration-300"
+          onClick={closeMenu}
         >
           Services
         </a>
         <a
           href="#pricing"
           className="block text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg transition-colors duration-300"
+          onClick={closeMenu}
         >
           Pricing
         </a>
         <a
           href="#contact"
           className="block text-gray-700 hover:text-blue-600 py-2 px-4 rounded-lg transition-colors duration-300"
+          onClick={closeMenu}
         >
           Contact Us
         </a>
