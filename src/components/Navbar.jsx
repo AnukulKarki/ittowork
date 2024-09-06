@@ -12,7 +12,7 @@ const Navbar = ({ id }) => {
   return (
     <nav
       id={id}
-      className="bg-[#EAF3FF] flex justify-between items-center px-6 md:px-10 py-4 md:py-6 relative h-auto"
+      className="bg-[#EAF3FF] flex justify-between items-center px-6 md:px-10 py-4 md:py-6 relative h-[10vh]"
     >
       {/* Logo Section */}
       <div className="flex items-center">
