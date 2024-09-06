@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import apis from "../apis/Apis";
+import { client } from "../utils/DataUtils";
 
-const Clients = ({ id }) => {
+const Clients = ({ id }) => {  
+  console.log(client)
   return (
     <section id={id} className="bg-white p-12 md:px-20">
       <Swiper
@@ -30,62 +33,43 @@ const Clients = ({ id }) => {
         }}
         modules={[Autoplay]}
       >
+        
         <SwiperSlide>
           <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 1"
+            src={require("../images/Company1.jpg")}
+            alt="Company"
             className="w-full h-50 object-cover"
           />
-        </SwiperSlide>
+        </SwiperSlide> 
         <SwiperSlide>
           <img
-            src="https://placehold.co/600x400/EAF3FF/31343C/"
-            alt="Client 2"
+            src={require("../images/Company2.jpg")}
+            alt="Company"
             className="w-full h-50 object-cover"
           />
-        </SwiperSlide>
+        </SwiperSlide> 
         <SwiperSlide>
           <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 3"
+            src={require("../images/Company3.png")}
+            alt="Company"
             className="w-full h-50 object-cover"
           />
-        </SwiperSlide>
+        </SwiperSlide> 
         <SwiperSlide>
           <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 4"
+            src={require("../images/Company4.jpg")}
+            alt="Company"
             className="w-full h-50 object-cover"
           />
-        </SwiperSlide>
+        </SwiperSlide> 
         <SwiperSlide>
           <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 4"
+            src={require("../images/Company5.png")}
+            alt="Company"
             className="w-full h-50 object-cover"
           />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 4"
-            className="w-full h-50 object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 4"
-            className="w-full h-50 object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://placehold.co/600x400/EEE/31343C/"
-            alt="Client 4"
-            className="w-full h-50 object-cover"
-          />
-        </SwiperSlide>
+        </SwiperSlide> 
+        
       </Swiper>
     </section>
   );

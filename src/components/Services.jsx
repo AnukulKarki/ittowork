@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Cloud from "../images/Cloud.png";
 import Web from "../images/web.png";
 import Seo from "../images/SEO.png";
 
 const Service = ({ id }) => {
+
+  
+
+
   return (
     <section id={id} className="bg-white px-12 md:px-20 mb-20">
       <div className="md:h-1/2 mt-10 text-center">
