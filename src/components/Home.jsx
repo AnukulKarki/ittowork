@@ -6,7 +6,7 @@ import { projectAndClient } from "../utils/DataUtils";
 
 const Home = () => {
   return (
-    <section className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center md:h-[85vh] pb-[10vh] pt-[5vh]">
+    <section className="bg-[#EAF3FF] px-12 md:px-20 flex flex-col md:flex-row items-center justify-center h-[90vh] pb-[10vh] pt-[5vh]">
       <div className="md:w-1/2">
         <p className="text-gray-500 italic">Your Partner In Progress...</p>
         <h1 className="text-4xl font-bold text-black mt-2">
